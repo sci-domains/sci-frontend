@@ -1,0 +1,31 @@
+.snapInstallButton {
+  background-color: #4CAF50;
+  border: none;
+  cursor: pointer;
+  color: white;
+  padding: 10px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  border-radius: 4px;
+
+  &:hover {
+    background-color: #45a049;
+  }
+
+  &:disabled {
+    background-color: #cccccc;
+    color: #666666;
+    cursor: not-allowed;
+  }
+}
+
+.errorMessage {
+  color: red;
+  margin-top: 10px;
+  font-size: 14px;
+  font-style: italic;
+}
