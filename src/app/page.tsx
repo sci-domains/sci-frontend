@@ -6,7 +6,7 @@ export default function Home() {
     <main className={styles.main}>
       <div className={styles.description}>
         <div className={styles.center}>
-          <SnapInstall snapId={'npm:sci-snap'} />
+          <SnapInstall snapId={process.env.NEXT_PUBLIC_SCI_SNAP_URL!} />
         </div>
       </div>
     </main>
