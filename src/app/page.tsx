@@ -6,7 +6,7 @@ export default function Home() {
     <main className={styles.main}>
       <div className={styles.description}>
         <div className={styles.center}>
-          <SnapInstall snapId={'npm:@metamask/template-snap'} />
+          <SnapInstall snapId={'npm:sci-snap'} />
         </div>
       </div>
     </main>
