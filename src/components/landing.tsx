@@ -75,7 +75,7 @@ export function Landing() {
               <b>SCI MetaMask Snap</b> effortlessly enhances your web3 security
               by verifying the smart contract address and domain involved in
               your transactions. It ensures your routine is undisturbed while
-              providing assurance that you're interacting with whitelisted
+              providing assurance that you&apos;re interacting with whitelisted
               contracts authorized by the legitimate dApp owners, safeguarding
               against any unauthorized alterations or hijacking.
             </p>
@@ -183,7 +183,7 @@ export function Landing() {
                 Frequently Asked Questions
               </h2>
               <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl">
-                Have questions? We've got answers.
+                Have questions? We&apos;ve got answers.
               </p>
             </div>
           </div>
@@ -271,7 +271,7 @@ export function Landing() {
                 Our Team
               </h2>
               <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl">
-                We're a team committed to making the Web3 space safer.
+                We&apos;re a team committed to making the Web3 space safer.
               </p>
             </div>
           </div>
