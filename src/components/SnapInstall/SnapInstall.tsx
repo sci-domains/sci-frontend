@@ -1,7 +1,7 @@
 'use client';
 import { Button } from '@/components/ui/button';
 import { hasSnap, installSnap } from '@/services/snap/snap';
-import React, { useEffect, useState } from 'react'; // Adjust the import path as needed
+import React, { useEffect, useState } from 'react';
 
 type SnapInstallProps = {
   snapId: string;
