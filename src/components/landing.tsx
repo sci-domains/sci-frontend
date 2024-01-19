@@ -1,3 +1,4 @@
+import MetamaskLogoViewer from '@/components/MetamaskLogoViewer/MetamaskLogoViewer';
 import SnapInstall from '@/components/SnapInstall/SnapInstall';
 import Link from 'next/link';
 import { JSX, SVGProps } from 'react';
@@ -64,13 +65,7 @@ export function Landing() {
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
               Secure Your Web3 Journey
             </h2>
-            <img
-              alt="Metamask Logo"
-              className="aspect-square object-cover  rounded-lg overflow-hidden dark:border-gray-800"
-              height={100}
-              src="/images/mm.png"
-              width={100}
-            />
+            <MetamaskLogoViewer width={129} height={129} followMouse={true} />
             <p className="text-gray-500 md:text-lg">
               <b>SCI MetaMask Snap</b> effortlessly enhances your web3 security
               by verifying the smart contract address and domain involved in
