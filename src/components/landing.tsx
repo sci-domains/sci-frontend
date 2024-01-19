@@ -289,7 +289,9 @@ export function Landing() {
                 width="100"
               />
               <h3 className="text-lg font-semibold">Agustin Lavarello</h3>
-              <p className="text-sm text-gray-500">Fullstack Engineer</p>
+              <p className="text-sm text-gray-500">
+                Fullstack & Solidity Engineer
+              </p>
             </div>
             <div className="flex flex-col items-center space-y-2">
               <img
