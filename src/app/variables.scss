@@ -1,0 +1,73 @@
+// Fonts
+$primary-font: var(--font-unageo);
+$font-size-md: 16px;
+$font-size-lg: 20px;
+$font-size-xl: 48px;
+$font-size-xxl: 64px;
+
+$font-lh-sm: 18px;
+$font-lh-md: 21px;
+$font-lh-lg: 24px;
+$font-lh-xl: 48px;
+$font-lh-xxl: 64px;
+
+// Colors
+// Primary Color
+$color-primary-dark: #00178F;
+$color-primary: #4160FF; // Blue
+$color-primary-light: #7A90FF;
+$color-primary-lighter: #C8D1FF;
+
+// Secondary Color
+$color-secondary-dark: #008FCC; // Bright Blue
+$color-secondary: #87DBFF; // Light Blue
+$color-secondary-light: #75CBF0; // Cyan
+$color-secondary-lighter: #DEFAFC; // Light Cyan
+
+// Tertiary Color
+$color-tertiary: #110463; // Dark Blue/Purple
+$color-tertiary-light: #806CF9; // Lavender
+$color-tertiary-lighter: #D0C9FD; // Soft Lavender
+
+// Accent Color
+$color-accent-dark: #8F5600; // Brown
+$color-accent: #F39200; // Orange
+$color-accent-light: #FFBE5C; // Pale Orange
+$color-accent-lighter: #FFE9C7; // Light Orange
+
+// Basic colors
+$white: #FFF;
+$black: #000;
+$color-black-digital: #0B0B0B;
+$color-grey-dark: #58647B;
+$color-grey: #A4BDC7;
+$color-grey-light: #E2EBEA;
+
+// Error colors
+$error-dark: #850010;
+$error: #E5152E;
+$error-light: #EF5164;
+$error-lighter: #FFB2BC;
+
+// Success Color
+$success-dark: #257F06; // Deep Green
+$success: #57C233; // Green
+$success-light: #7FCB64; // Soft Green
+$success-lighter: #C8FCB6; // Light Green
+
+// Attention Color
+$attention-dark: #856700; // Dark Brown/Gold
+$attention: #F3BE00; // Gold
+$attention-light: #E3C55A; // Pale Gold
+$attention-lighter: #FFEEB2; // Soft Gold
+
+$breakpoint-sm: 576px; // Small devices
+$breakpoint-md: 768px; // Medium devices
+
+@function sm-up() {
+  @return "only screen and (min-width: #{$breakpoint-sm})";
+}
+
+@function md-up() {
+  @return "only screen and (min-width: #{$breakpoint-md})";
+}

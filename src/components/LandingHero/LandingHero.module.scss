@@ -1,0 +1,73 @@
+@import '@/app/variables.scss'; // Import color variables
+.hero {
+  display: flex;
+  flex-direction: column;
+
+  .divider {
+    height: 4px; // This sets the height of the divider
+    background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 50%, rgba(255,255,255,0) 100%); // This creates a gradient effect
+    width: 100%; // This makes the divider stretch to the full container width
+  }
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 24px;
+  flex-direction: column;
+  background-color: $color-primary;
+  gap: 24px;
+
+  @media #{md-up()} {
+    flex-direction: row;
+    padding: 40px 120px;
+    gap: 16px;
+  }
+
+  .content {
+    width: 100%;
+    color: #FFF;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    @media #{md-up()} {
+      max-width: 600px;
+    }
+
+    h1 {
+      font-weight: 700;
+      font-size: $font-size-xl;
+      line-height: $font-lh-xl;
+
+      @media #{md-up()} {
+        font-size: $font-size-xxl;
+        line-height: $font-lh-xxl;
+      }
+    }
+
+    p {
+      font-weight: 300;
+      font-size: $font-size-md;
+      line-height: $font-lh-md;
+
+      @media #{md-up()} {
+        font-size: $font-size-lg;
+        line-height: $font-lh-lg;
+      }
+    }
+
+    strong {
+      font-weight: 700;
+    }
+  }
+
+  .image {
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+}

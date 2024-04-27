@@ -1,3 +1,5 @@
+import Header from '@/components/Header/Header';
+import LandingHero from '@/components/LandingHero/LandingHero';
 import MetamaskLogoViewer from '@/components/MetamaskLogoViewer/MetamaskLogoViewer';
 import SnapInstall from '@/components/SnapInstall/SnapInstall';
 import Link from 'next/link';
@@ -5,20 +7,8 @@ import { JSX, SVGProps } from 'react';
 export function Landing() {
   return (
     <main key="1" className="bg-gray-50 text-gray-900">
-      <header className="flex items-center justify-between px-4 py-6 border-b border-transparent bg-white shadow-md">
-        <div className="flex items-center space-x-4">
-          <img
-            alt="SCI Logo"
-            className="aspect-[958/150] overflow-hidden object-contain object-center"
-            height="29"
-            src="/images/logo.png"
-            width="186"
-          />
-          <h1 className="sr-only text-2xl font-bold tracking-tighter text-gray-900 dark:text-gray-100">
-            SCI
-          </h1>
-        </div>
-      </header>
+      <Header />
+      <LandingHero />
       <section className="w-full h-screen border-b-2 border-gray-200 flex justify-center items-center">
         <div className="container px-4 md:px-6">
           <div className="flex flex-col items-center space-y-4 text-center">
