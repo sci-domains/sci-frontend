@@ -1,6 +1,7 @@
 import Header from '@/components/Header/Header';
 import LandingHero from '@/components/LandingHero/LandingHero';
 import MetamaskLogoViewer from '@/components/MetamaskLogoViewer/MetamaskLogoViewer';
+import { ProtocolDescription } from '@/components/ProtocolDescription/ProtocolDescription';
 import SnapInstall from '@/components/SnapInstall/SnapInstall';
 import Link from 'next/link';
 import { JSX, SVGProps } from 'react';
@@ -9,6 +10,7 @@ export function Landing() {
     <main key="1" className="bg-gray-50 text-gray-900">
       <Header />
       <LandingHero />
+      <ProtocolDescription />
       <section className="w-full h-screen border-b-2 border-gray-200 flex justify-center items-center">
         <div className="container px-4 md:px-6">
           <div className="flex flex-col items-center space-y-4 text-center">

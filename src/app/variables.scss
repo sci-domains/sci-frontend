@@ -63,6 +63,8 @@ $attention-lighter: #FFEEB2; // Soft Gold
 
 $breakpoint-sm: 576px; // Small devices
 $breakpoint-md: 768px; // Medium devices
+$breakpoint-lg: 992px; // Large devices
+$breakpoint-xl: 1200px; // Extra large devices
 
 @function sm-up() {
   @return "only screen and (min-width: #{$breakpoint-sm})";
@@ -70,4 +72,12 @@ $breakpoint-md: 768px; // Medium devices
 
 @function md-up() {
   @return "only screen and (min-width: #{$breakpoint-md})";
+}
+
+@function lg-up() {
+  @return "only screen and (min-width: #{$breakpoint-lg})";
+}
+
+@function xl-up() {
+  @return "only screen and (min-width: #{$breakpoint-xl})";
 }
