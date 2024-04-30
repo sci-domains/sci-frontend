@@ -5,12 +5,14 @@ import { ProtocolDescription } from '@/components/ProtocolDescription/ProtocolDe
 import SnapInstall from '@/components/SnapInstall/SnapInstall';
 import Link from 'next/link';
 import { JSX, SVGProps } from 'react';
+import { WebAppSection } from '@/components/WebAppSection/WebAppSection';
 export function Landing() {
   return (
     <main key="1" className="bg-gray-50 text-gray-900">
       <Header />
       <LandingHero />
       <ProtocolDescription />
+      <WebAppSection />
       <section className="w-full h-screen border-b-2 border-gray-200 flex justify-center items-center">
         <div className="container px-4 md:px-6">
           <div className="flex flex-col items-center space-y-4 text-center">
