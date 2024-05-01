@@ -109,7 +109,13 @@
     }
   }
 }
-
+.mmLogo {
+  margin-top: -29px;
+  img {
+    width: 50%;
+    max-width: 229px;
+  }
+}
 .disclaimer {
   font-family: $primary-font;
   font-size: $font-size-xs;
