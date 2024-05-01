@@ -1,0 +1,103 @@
+@import "@/app/variables.scss";
+
+.snapContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  @media #{sm-up()} {
+    padding: 24px 135px;
+
+  }
+  h3 {
+    width: fit-content;
+    padding: 4px 8px 4px 8px;
+    color: $color-primary-dark;
+    font-size: $font-size-sm;
+    line-height: $font-lh-md;
+    font-weight: 500;
+    background-color: $color-secondary-lighter;
+  }
+
+  .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+
+    @media #{sm-up()} {
+      flex-direction: row;
+      gap: 24px;
+    }
+  }
+}
+
+.descriptionContainer {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 29px;
+
+  h1 {
+    color: $color-primary;
+    font-size: $font-size-xl;
+    line-height: $font-lh-xl;
+    font-weight: 700;
+  }
+
+  p {
+    color: $color-black-digital;
+    font-size: $font-size-lg;
+    line-height: $font-lh-lg;
+
+    strong {
+      color: $color-primary;
+      font-weight: 700;
+    }
+  }
+}
+
+.metamaskContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 48px;
+
+  @media #{lg-up()} {
+    flex: 1 0 420px;
+  }
+
+  @media #{lg-up()} {
+    flex: 1 0 420px;
+  }
+
+  @media #{xl-up()} {
+    flex: 1 0 690px;
+  }
+
+  .sciLogo {
+    width: 100%;
+    position: relative;
+    padding: 40px 38px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      width: 50%;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      width: 50%; // Adjust to your desired width
+      left: 50%; // Start positioning from the center
+      transform: translateX(-50%); // Center the divider horizontally
+      right: 0;
+      height: 1px;
+      padding: 0 42%;
+      background-color: $color-primary; // Adjust this color to your preference
+    }
+  }
+}
