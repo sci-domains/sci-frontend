@@ -1,6 +1,6 @@
 @import "@/app/variables.scss";
 
-.webAppSection {
+.snapSection {
   display: flex;
   flex-direction: column;
   gap: 24px;
@@ -66,17 +66,51 @@
 
     text-align: left;
     color: $color-black-digital;
+
+    p {
+      color: $color-black-digital;
+      font-size: $font-size-lg;
+      line-height: $font-lh-lg;
+
+      strong {
+        color: $color-primary;
+        font-weight: 700;
+      }
+    }
   }
 }
 
-.image {
+.metamaskLogo {
   display: flex;
   justify-content: center;
   align-items: center;
 
-  img {
-    max-width: 100%;
-    height: auto;
+  .sciLogo {
+    width: 100%;
+    position: relative;
+    padding: 40px 38px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      //width: 50%;
+      max-width: 100%;
+      height: auto;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      width: 50%; // Adjust to your desired width
+      left: 50%; // Start positioning from the center
+      transform: translateX(-50%); // Center the divider horizontally
+      right: 0;
+      height: 1px;
+      padding: 0 42%;
+      background-color: $color-primary; // Adjust this color to your preference
+    }
   }
 }
 
@@ -85,15 +119,10 @@
   font-weight: 300;
   font-size: 24px;
   line-height: 36px;
-  text-align: center;
 
   @media #{sm-up()} {
     font-size: 32px;
     line-height: $font-lh-xl;
-  }
-
-  @media #{lg-up()} {
-    text-align: left;
   }
 
   strong {
@@ -107,26 +136,5 @@
     &:hover {
       color: $color-primary-light;
     }
-  }
-}
-
-.highlighted {
-  -webkit-animation: 1.5s highlight 1.5s 1 normal forwards;
-  animation: 1.5s highlight 1.5s 1 normal forwards;
-  background-color: transparent;
-  background: linear-gradient(90deg, #FFF 50%, rgba(255, 255, 255, 0) 50%);
-  background-size: 200% 100%;
-  background-position: 100% 0;
-}
-
-@-webkit-keyframes highlight {
-  to {
-    background-position: 0 0;
-  }
-}
-
-@keyframes highlight {
-  to {
-    background-position: 0 0;
   }
 }

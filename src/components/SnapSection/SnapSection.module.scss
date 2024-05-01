@@ -3,11 +3,11 @@
 .snapContainer {
   display: flex;
   flex-direction: column;
-  padding: 24px;
-  @media #{sm-up()} {
-    padding: 24px 135px;
-
+  padding: 60px 24px 60px 24px;
+  @media #{lg-up()} {
+    padding: 24px 135px 100px 135px;
   }
+
   h3 {
     width: fit-content;
     padding: 4px 8px 4px 8px;
@@ -24,7 +24,7 @@
     justify-content: center;
     align-items: start;
 
-    @media #{sm-up()} {
+    @media #{lg-up()} {
       flex-direction: row;
       gap: 24px;
     }
@@ -36,12 +36,21 @@
   display: flex;
   flex-direction: column;
   gap: 29px;
+  flex: 2;
 
+  @media #{sm-up()} {
+    max-width: 829px;
+  }
   h1 {
     color: $color-primary;
     font-size: $font-size-xl;
     line-height: $font-lh-xl;
     font-weight: 700;
+    
+    @media #{sm-up()} {
+      font-size: $font-size-xxl;
+      line-height: $font-lh-xxl;
+    }
   }
 
   p {
@@ -58,23 +67,15 @@
 
 .metamaskContainer {
   display: flex;
+  width: 100%;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 48px;
 
   @media #{lg-up()} {
-    flex: 1 0 420px;
+    width: initial;
   }
-
-  @media #{lg-up()} {
-    flex: 1 0 420px;
-  }
-
-  @media #{xl-up()} {
-    flex: 1 0 690px;
-  }
-
   .sciLogo {
     width: 100%;
     position: relative;
@@ -85,6 +86,7 @@
 
     img {
       width: 50%;
+      max-width: 229px;
     }
 
     &::after {
@@ -96,8 +98,26 @@
       transform: translateX(-50%); // Center the divider horizontally
       right: 0;
       height: 1px;
-      padding: 0 42%;
+      padding: 0;
       background-color: $color-primary; // Adjust this color to your preference
+      @media #{sm-up()} {
+        padding: 0 42%;
+      }
     }
+  }
+}
+
+.disclaimer {
+  font-family: $primary-font;
+  font-size: $font-size-xs;
+  font-weight: 400;
+  line-height: $font-lh-xs;
+  text-align: center;
+  color: $color-grey;
+  display: inline-block;
+  width: 100%;
+
+  @media #{lg-up()} {
+    text-align: left;
   }
 }

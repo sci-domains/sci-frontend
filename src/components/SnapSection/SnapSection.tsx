@@ -24,7 +24,10 @@ export const SnapSection: React.FC = () => {
             legitimate dApp owners, safeguarding against any unauthorized
             alterations or hijacking.
           </p>
-          <SnapInstall snapId={process.env.NEXT_PUBLIC_SCI_SNAP_URL!} />
+          <div>
+            <SnapInstall snapId={process.env.NEXT_PUBLIC_SCI_SNAP_URL!} />
+            <span className={styles.disclaimer}>* Metamask required *</span>
+          </div>
         </div>
         <div className={styles.metamaskContainer}>
           <div className={styles.sciLogo}>

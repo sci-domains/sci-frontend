@@ -1,3 +1,4 @@
+'use client';
 import { hasSnap, installSnap } from '@/services/snap/snap';
 import React, { useEffect, useState } from 'react';
 import styles from './SnapInstall.module.scss';
@@ -41,7 +42,6 @@ const SnapInstall: React.FC<SnapInstallProps> = ({ snapId }) => {
       >
         {isInstalled ? 'Snap already installed' : 'Install SCI Metamask Snap'}
       </button>
-      <a className={styles.disclaimer}>* Metamask required *</a>
       {error && (
         <div className="text-sm mt-1 text-red-600 dark:text-red-500 text-center">
           {error}
