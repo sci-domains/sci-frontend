@@ -1,25 +1,44 @@
+@import "@/app/variables.scss";
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}
 .snapInstallButton {
-  background-color: #4CAF50;
+  background-color: $color-primary;
   border: none;
   cursor: pointer;
   color: white;
-  padding: 10px 15px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
+  font-family: $primary-font;
+  font-size: $font-size-md;
+  line-height: $font-lh-sm;
   margin: 4px 2px;
+  padding: 12px 24px;
+  font-weight: 400;
   transition-duration: 0.4s;
   border-radius: 4px;
 
   &:hover {
-    background-color: #45a049;
+    background-color: $color-primary-light;
   }
 
   &:disabled {
-    background-color: #cccccc;
-    color: #666666;
+    background-color: $color-grey-light;
+    color: $color-grey-dark;
     cursor: not-allowed;
+  }
+
+  .disclaimer {
+    font-family: $primary-font;
+    font-size: $font-size-xs;
+    font-weight: 400;
+    line-height: $font-lh-xs;
+    text-align: center;
+    color: $color-grey;
   }
 }
 
@@ -29,3 +48,4 @@
   font-size: 14px;
   font-style: italic;
 }
+

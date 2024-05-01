@@ -1,11 +1,11 @@
 import Header from '@/components/Header/Header';
 import LandingHero from '@/components/LandingHero/LandingHero';
-import MetamaskLogoViewer from '@/components/MetamaskLogoViewer/MetamaskLogoViewer';
 import { ProtocolDescription } from '@/components/ProtocolDescription/ProtocolDescription';
-import SnapInstall from '@/components/SnapInstall/SnapInstall';
-import Link from 'next/link';
-import { JSX, SVGProps } from 'react';
 import { WebAppSection } from '@/components/WebAppSection/WebAppSection';
+
+
+import { SnapSection } from '@/components/SnapSection/SnapSection';
+
 export function Landing() {
   return (
     <main key="1" className="bg-gray-50 text-gray-900">
@@ -13,6 +13,7 @@ export function Landing() {
       <LandingHero />
       <ProtocolDescription />
       <WebAppSection />
+      <SnapSection />
       <section className="w-full h-screen border-b-2 border-gray-200 flex justify-center items-center">
         <div className="container px-4 md:px-6">
           <div className="flex flex-col items-center space-y-4 text-center">
@@ -331,66 +332,5 @@ export function Landing() {
         </div>
       </section>
     </main>
-  );
-}
-
-function CheckIcon(props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>) {
-  return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <polyline points="20 6 9 17 4 12" />
-    </svg>
-  );
-}
-
-function PlugIcon(props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>) {
-  return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path d="M12 22v-5" />
-      <path d="M9 8V2" />
-      <path d="M15 8V2" />
-      <path d="M18 8v5a4 4 0 1-4 4h-4a4 1-4-4V8Z" />
-    </svg>
-  );
-}
-
-function UserIcon(props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>) {
-  return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path d="M19 21v-2a4 4 0 0-4-4H9a4 0-4 4v2" />
-      <circle cx="12" cy="7" r="4" />
-    </svg>
   );
 }
