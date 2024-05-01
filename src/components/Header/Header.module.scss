@@ -1,6 +1,9 @@
 @import '@/app/variables.scss';
 
 .header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
   font-family: $primary-font;
   padding: 16px 32px;
   display: flex;

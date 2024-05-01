@@ -3,6 +3,8 @@ import LandingHero from '@/components/LandingHero/LandingHero';
 import { ProtocolDescription } from '@/components/ProtocolDescription/ProtocolDescription';
 import { WebAppSection } from '@/components/WebAppSection/WebAppSection';
 
+import { FAQSection } from '@/components/FAQSection/FAQSection';
+import Footer from '@/components/Footer/Footer';
 import { SnapSection } from '@/components/SnapSection/SnapSection';
 
 export function Landing() {
@@ -11,8 +13,16 @@ export function Landing() {
       <Header />
       <LandingHero />
       <ProtocolDescription />
-      <SnapSection />
-      <WebAppSection />
+      <div id="snap">
+        <SnapSection />
+      </div>
+      <div id="app">
+        <WebAppSection />
+      </div>
+      <div id="faq">
+        <FAQSection />
+      </div>
+      <Footer />
     </main>
   );
 }

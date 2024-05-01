@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import styles from './Header.module.scss';
 
 const Header: React.FC = () => {
-  // TODO: Fix menu open an design on mobile
+  // TODO: Fix menu open in mobile
   const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -18,19 +18,24 @@ const Header: React.FC = () => {
       </div>
 
       <div className={styles.nav}>
-        <Link href="/snap">Snap</Link>
-        <Link href="/faq">FAQ</Link>
-        <Link href="/docs">Docs</Link>
+        <Link href="#snap">Snap</Link>
+        <Link href="#faq">FAQ</Link>
+        <Link
+          target={'_blank'}
+          href="https://raw.githubusercontent.com/sci-domains/core/blob/main/Whitepaper.pdf"
+        >
+          Docs
+        </Link>
       </div>
 
       <div className={styles.button}>
-        <Link href="/app">Go to App</Link>
+        <Link href="#app">Go to App</Link>
         <div className={styles.menuIcon} onClick={toggleMenu}>
           <img src={'/images/icons/burger_icon.svg'} alt={'Menu'} />
         </div>
       </div>
 
-      {menuOpen && ( // Display full-screen menu when open
+      {menuOpen && (
         <div className={styles.fullScreenMenu}>
           <nav>
             <Link href="/snap" onClick={toggleMenu}>

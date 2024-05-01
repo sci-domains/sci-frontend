@@ -1,0 +1,95 @@
+@import "@/app/variables.scss";
+
+.faqSection {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  background: linear-gradient(0deg, #110463, #110463), linear-gradient(105.48deg, #110463 49.45%, #4160FF 133.44%);
+
+  padding: 60px 24px;
+
+  @media #{lg-up()} {
+    padding: 60px 135px 100px 135px;
+  }
+
+  .title {
+    font-size: $font-size-xl;
+    line-height: $font-lh-xl;
+    font-weight: 700;
+    text-align: left;
+    color: #FFF;
+
+    @media #{sm-up()} {
+      font-size: $font-size-xxl;
+      line-height: $font-lh-xxl;
+    }
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 48px;
+
+  @media #{xl-up()} {
+    flex-direction: row;
+    gap: 100px;
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  .description {
+    font-size: $font-size-lg;
+    line-height: $font-lh-lg;
+    font-weight: 300;
+
+    text-align: left;
+    color:#FFF;
+
+    strong {
+      font-weight: 700;
+    }
+  }
+}
+
+.faqs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media #{xl-up()} {
+    flex: 1 0 629px;
+  }
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  width: 100%;
+
+  a {
+    text-align: center;
+    padding: 12px 24px;
+    background-color: $color-secondary-lighter;
+    color: $color-tertiary;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: $font-size-md;
+    line-height: $font-lh-sm;
+    font-weight: 400;
+    width: 100%;
+
+    @media #{lg-up()} {
+      width: initial;
+    }
+
+    &:hover {
+      background-color: $color-secondary-light;
+    }
+  }
+}

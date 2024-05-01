@@ -1,0 +1,51 @@
+@import "@/app/variables.scss";
+
+.faqContainer {
+  width: 100%;
+  color: white;
+  border-radius: 8px;
+
+  details {
+    margin-bottom: 16px;
+    border-bottom: 1px solid $color-grey-light;
+    padding-bottom: 16px;
+
+    summary {
+      display: flex;
+      cursor: pointer;
+      font-size: $font-size-lg;
+      line-height: $font-lh-lg;
+      font-weight: 700;
+      outline: none;
+      list-style-type: none;
+
+      &::before {
+        content: '+';
+        display: block;
+        width: fit-content; // Adjust the width to manage spacing
+        height: 100%;
+        padding-right: 20px;
+        text-align: center;
+      }
+
+      &:hover {
+        color: $color-grey-light;
+      }
+
+      &::-webkit-details-marker {
+        display: none;
+      }
+
+    }
+
+    .answer {
+      font-size: $font-size-md;
+      line-height: $font-lh-md;
+      margin-top: 16px;
+      padding-left: 30px; // indent answer a bit
+    }
+  }
+  details[open] > summary::before {
+    content: '-'; // changes to - when details is open
+  }
+}
