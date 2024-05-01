@@ -19,6 +19,9 @@ export function Landing() {
       <div id="app">
         <WebAppSection />
       </div>
+      {/* <div id="team">
+        <SCITeamSection />
+      </div>*/}
       <div id="faq">
         <FAQSection />
       </div>
