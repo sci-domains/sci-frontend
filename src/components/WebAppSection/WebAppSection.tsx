@@ -20,7 +20,7 @@ export const WebAppSection: React.FC = () => {
           <img src="/images/sci_webapp.svg" alt="SCI WebApp Illustration" />
         </div>
       </div>
-  
+
       <p className={styles.contactUs}>
         <span className={styles.highlighted}>
           Stay tuned for the upcoming release our web application. Meanwhile,{' '}
