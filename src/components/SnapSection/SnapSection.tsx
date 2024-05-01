@@ -33,7 +33,7 @@ export const SnapSection: React.FC = () => {
           <div className={styles.sciLogo}>
             <img src="/images/logo/sci_logo.svg" alt="Logo" />
           </div>
-          <MetamaskLogoViewer width={129} height={129} />
+          <MetamaskLogoViewer width={129} height={129} followMouse />
         </div>
       </div>
     </section>
