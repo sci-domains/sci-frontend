@@ -1,0 +1,33 @@
+@import "@/app/variables.scss";
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 32px 24px;
+  background-color: $color-black-digital;
+
+  @media #{lg-up()} {
+    flex-direction: row;
+    padding: 32px 135px;
+  }
+
+  .logo {
+    width: 72px;
+    margin-bottom: 32px;
+
+    @media #{lg-up()} {
+      margin-bottom: 0;
+    }
+  }
+
+  .trademark {
+    text-align: left;
+    color: $white;
+    font-size: $font-size-xs;
+
+    @media #{lg-up()} {
+      text-align: right;
+    }
+  }
+}

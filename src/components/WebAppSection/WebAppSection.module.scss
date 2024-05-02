@@ -1,0 +1,132 @@
+@import "@/app/variables.scss";
+
+.webAppSection {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  background-color: $color-secondary-lighter;
+  padding: 60px 24px;
+
+  @media #{lg-up()} {
+    padding: 60px 135px 100px 135px;
+  }
+
+  .tag {
+    width: fit-content;
+    font-size: $font-size-sm;
+    font-weight: 500;
+    line-height: $font-lh-md;
+    text-align: left;
+    background: #FFF;
+    color: $color-primary;
+    padding: 4px 8px;
+    border-radius: 4px;
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 24px;
+
+  @media #{lg-up()} {
+    flex-direction: row;
+    gap: 16px;
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  flex: 2;
+
+  @media #{sm-up()} {
+    max-width: 829px;
+  }
+
+  .title {
+    font-size: $font-size-xl;
+    line-height: $font-lh-xl;
+    font-weight: 700;
+    text-align: left;
+    color: $color-primary;
+
+    @media #{sm-up()} {
+      font-size: $font-size-xxl;
+      line-height: $font-lh-xxl;
+    }
+  }
+
+  .description {
+    font-size: $font-size-lg;
+    line-height: $font-lh-lg;
+    font-weight: 300;
+
+    text-align: left;
+    color: $color-black-digital;
+  }
+}
+
+.image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+.contactUs{
+  color: $color-primary;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 36px;
+  text-align: center;
+
+  @media #{sm-up()} {
+    font-size: 32px;
+    line-height: $font-lh-xl;
+  }
+
+  @media #{lg-up()} {
+    text-align: left;
+  }
+
+  strong {
+    font-weight: 700;
+  }
+
+  a {
+    color: $color-primary;
+    text-decoration: underline;
+
+    &:hover {
+      color: $color-primary-light;
+    }
+  }
+}
+
+.highlighted {
+  -webkit-animation: 1.5s highlight 1.5s 1 normal forwards;
+  animation: 1.5s highlight 1.5s 1 normal forwards;
+  background-color: transparent;
+  background: linear-gradient(90deg, #FFF 50%, rgba(255, 255, 255, 0) 50%);
+  background-size: 200% 100%;
+  background-position: 100% 0;
+}
+
+@-webkit-keyframes highlight {
+  to {
+    background-position: 0 0;
+  }
+}
+
+@keyframes highlight {
+  to {
+    background-position: 0 0;
+  }
+}

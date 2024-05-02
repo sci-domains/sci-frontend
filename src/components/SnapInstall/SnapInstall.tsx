@@ -1,7 +1,7 @@
 'use client';
-import { Button } from '@/components/ui/button';
 import { hasSnap, installSnap } from '@/services/snap/snap';
 import React, { useEffect, useState } from 'react';
+import styles from './SnapInstall.module.scss';
 
 type SnapInstallProps = {
   snapId: string;
@@ -34,19 +34,14 @@ const SnapInstall: React.FC<SnapInstallProps> = ({ snapId }) => {
   };
 
   return (
-    <div className={'flex flex-col justify-center items-center'}>
-      <Button
-        className="w-1/2"
-        size="lg"
-        variant={'secondary'}
+    <div className={styles.container}>
+      <button
+        className={styles.snapInstallButton}
         onClick={handleInstall}
         disabled={isInstalled}
       >
-        {isInstalled ? 'Installed' : 'Install Snap'}
-      </Button>
-      <p className="text-sm text-gray-500 dark:text-gray-400 mt-1 text-center">
-        Metamask required*
-      </p>
+        {isInstalled ? 'Snap already installed' : 'Install SCI Metamask Snap'}
+      </button>
       {error && (
         <div className="text-sm mt-1 text-red-600 dark:text-red-500 text-center">
           {error}

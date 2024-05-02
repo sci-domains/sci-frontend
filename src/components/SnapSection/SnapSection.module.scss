@@ -1,0 +1,132 @@
+@import "@/app/variables.scss";
+
+.snapContainer {
+  display: flex;
+  flex-direction: column;
+
+  padding: 60px 24px 60px 24px;
+  @media #{lg-up()} {
+    padding: 24px 135px 100px 135px;
+  }
+
+  h3 {
+    width: fit-content;
+    padding: 4px 8px 4px 8px;
+    color: $color-primary-dark;
+    font-size: $font-size-sm;
+    line-height: $font-lh-md;
+    font-weight: 500;
+    background-color: $color-secondary-lighter;
+  }
+
+  .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 24px;
+
+    @media #{lg-up()} {
+      flex-direction: row;
+      gap: 16px;
+    }
+  }
+}
+
+.descriptionContainer {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 29px;
+  flex: 2;
+
+  @media #{sm-up()} {
+    max-width: 729px;
+  }
+
+  h1 {
+    color: $color-primary;
+    font-size: $font-size-xl;
+    line-height: $font-lh-xl;
+    font-weight: 700;
+
+    @media #{sm-up()} {
+      font-size: $font-size-xxl;
+      line-height: $font-lh-xxl;
+    }
+  }
+
+  p {
+    color: $color-black-digital;
+    font-size: $font-size-lg;
+    line-height: $font-lh-lg;
+
+    strong {
+      color: $color-primary;
+      font-weight: 700;
+    }
+  }
+}
+
+.metamaskContainer {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 48px;
+
+  @media #{lg-up()} {
+    width: initial;
+    min-width: 420px;
+  }
+  .sciLogo {
+    width: 100%;
+    position: relative;
+    padding: 40px 38px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      width: 50%;
+      max-width: 229px;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      width: 50%; // Adjust to your desired width
+      left: 50%; // Start positioning from the center
+      transform: translateX(-50%); // Center the divider horizontally
+      right: 0;
+      height: 1px;
+      padding: 0;
+      background-color: $color-primary; // Adjust this color to your preference
+      @media #{sm-up()} {
+        padding: 0 42%;
+      }
+    }
+  }
+}
+.mmLogo {
+  margin-top: -29px;
+  img {
+    width: 50%;
+    max-width: 229px;
+  }
+}
+.disclaimer {
+  font-family: $primary-font;
+  font-size: $font-size-xs;
+  font-weight: 400;
+  line-height: $font-lh-xs;
+  text-align: center;
+  color: $color-grey;
+  display: inline-block;
+  width: 100%;
+
+  @media #{lg-up()} {
+    text-align: left;
+  }
+}

@@ -1,0 +1,104 @@
+@import '@/app/variables.scss';
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  font-family: $primary-font;
+  padding: 16px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $white;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+
+  .logo {
+    width: 72px;
+  }
+
+  .nav {
+    display: none; // Hidden by default for mobile view
+
+    @media #{md-up()} { // Visible on larger screens
+      display: flex;
+      gap: 10px; // Space between links
+
+      a {
+        text-decoration: none;
+        color: $color-black-digital;
+        font-size: $font-size-md;
+        line-height: $font-lh-md;
+        font-weight: 500;
+        transition: color 0.3s ease-in-out;
+
+        &:hover {
+          color: $color-primary;
+        }
+      }
+    }
+  }
+
+  .button {
+    display: flex;
+    align-items: center;
+
+    a {
+      padding: 8px 16px;
+      background-color: $color-primary;
+      color: $white;
+      border-radius: 4px;
+      text-decoration: none;
+      font-size: $font-size-md;
+      line-height: $font-lh-sm;
+      font-weight: 400;
+
+      &:hover {
+        background-color: $color-primary-light;
+      }
+    }
+
+    .menuIcon {
+      display: flex; // Displayed on smaller screens
+      cursor: pointer;
+      margin-left: 16px;
+
+      @media #{md-up()} { // Hide the burger icon on larger screens
+        display: none;
+      }
+    }
+  }
+}
+
+.fullScreenMenu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media #{md-up()} {
+    display: none;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    a {
+      color: $color-black-digital;
+      font-size: $font-size-lg;
+      font-weight: 500;
+      text-align: left;
+      text-decoration: none;
+
+      &:hover {
+        color: $color-primary;
+      }
+    }
+  }
+}

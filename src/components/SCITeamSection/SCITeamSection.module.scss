@@ -1,0 +1,131 @@
+@import "@/app/variables";
+
+.teamSection {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding: 60px 24px;
+  background: linear-gradient(0deg, #00178F, #00178F), linear-gradient(105.48deg, #00178F 49.45%, #110463 133.44%);
+
+  @media #{lg-up()} {
+    padding: 60px 135px 100px 135px;
+    gap: 48px;
+  }
+
+  .title {
+    font-size: $font-size-xl;
+    line-height: $font-lh-xl;
+    font-weight: 700;
+    text-align: left;
+    color: #FFF;
+
+    @media #{sm-up()} {
+      font-size: $font-size-xxl;
+      line-height: $font-lh-xxl;
+    }
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+
+    @media #{sm-up()} {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media #{md-up()} {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  .card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: 1px solid #FFF;
+    padding: 24px 16px;
+
+    text-align: left;
+    gap: 18px;
+
+    @media #{sm-up()} {
+      flex-direction: column;
+      align-items: start;
+      max-width: 229px;
+    }
+
+    img {
+      width: 29%;
+      height: auto;
+      border-radius: 50%;
+
+      @media #{sm-up()} {
+        width: 80%;
+        max-width: 96px;
+      }
+    }
+
+    .info {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+
+      .description {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+
+        @media #{sm-up()} {
+          min-height: 70px;
+        }
+
+        @media #{md-up()} {
+          min-height: 94px;
+        }
+        
+        @media #{xl-up()} {
+          min-height: 70px;
+        }
+      }
+    }
+
+    h2 {
+      width: 100%;
+      font-size: $font-size-lg;
+      line-height: $font-lh-lg;
+      font-weight: 700;
+      color: $color-secondary;
+    }
+
+    p {
+      font-size: $font-size-md;
+      line-height: $font-lh-md;
+      color: #FFF;
+    }
+
+    .socialMedia {
+      width: fit-content;
+      border-radius: 50%;
+      border: #FFF solid 1px;
+      font-size: $font-size-sm;
+      line-height: $font-lh-sm;
+      text-decoration: none;
+
+      &:hover {
+        background: $color-secondary-dark;
+      }
+
+      img {
+        display: inline-block;
+        padding: 1px;
+        object-fit: contain;
+        width: 29px;
+
+        @media #{sm-up()} {
+          width: 33px;
+        }
+      }
+    }
+  }
+}
