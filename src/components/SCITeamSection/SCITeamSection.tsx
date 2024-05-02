@@ -11,28 +11,28 @@ interface TeamMember {
 
 const teamMembers: TeamMember[] = [
   {
-    name: 'John Doe',
-    jobDescription: 'CEO',
+    name: 'Agustin Lavarello',
+    jobDescription: 'Fullstack & Solidity Engineer',
     photoUrl: '/images/team_identities/al.png',
-    linkedInUrl: 'https://www.linkedin.com/in/johndoe',
+    linkedInUrl: 'https://www.linkedin.com/in/agustin-lavarello-62ab1114b/',
   },
   {
-    name: 'Jane Doe',
-    jobDescription: 'CTO',
+    name: 'Nicolas De Leon',
+    jobDescription: 'Fullstack Engineer',
+    photoUrl: '/images/team_identities/nde.png',
+    linkedInUrl: 'https://www.linkedin.com/in/nicolasmatiasdeleon/',
+  },
+  {
+    name: 'Agustin Vazquez',
+    jobDescription: 'Fullstack Engineer',
     photoUrl: '/images/team_identities/av.png',
-    linkedInUrl: 'https://www.linkedin.com/in/janedoe',
+    linkedInUrl: 'https://www.linkedin.com/in/agustinignaciovazquez/',
   },
   {
-    name: 'John Doe',
-    jobDescription: 'CEO',
-    photoUrl: '/images/team_identities/al.png',
-    linkedInUrl: 'https://www.linkedin.com/in/johndoe',
-  },
-  {
-    name: 'Jane Doe',
-    jobDescription: 'CTO',
-    photoUrl: '/images/team_identities/av.png',
-    linkedInUrl: 'https://www.linkedin.com/in/janedoe',
+    name: 'Santiago Echeverria',
+    jobDescription: 'Product Owner',
+    photoUrl: '/images/team_identities/se.png',
+    linkedInUrl: 'https://www.linkedin.com/in/santiago-echeverria-697844116/',
   },
 ];
 
@@ -44,9 +44,18 @@ const SCITeamSection: React.FC = () => {
         {teamMembers.map((member, index) => (
           <div key={index} className={styles.card}>
             <img src={member.photoUrl} alt={member.name} />
-            <h2>{member.name}</h2>
-            <p>{member.jobDescription}</p>
-            <a href={member.linkedInUrl}>LinkedIn</a>
+            <div className={styles.info}>
+              <div className={styles.description}>
+                <h2>{member.name}</h2>
+                <p>{member.jobDescription}</p>
+              </div>
+              <a className={styles.socialMedia} href={member.linkedInUrl}>
+                <img
+                  src={'/images/logo/linkedIn.svg'}
+                  alt={'LinkedIn Profile'}
+                />
+              </a>
+            </div>
           </div>
         ))}
       </div>

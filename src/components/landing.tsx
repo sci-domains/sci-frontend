@@ -5,6 +5,7 @@ import { WebAppSection } from '@/components/WebAppSection/WebAppSection';
 
 import { FAQSection } from '@/components/FAQSection/FAQSection';
 import Footer from '@/components/Footer/Footer';
+import SCITeamSection from '@/components/SCITeamSection/SCITeamSection';
 import { SnapSection } from '@/components/SnapSection/SnapSection';
 
 export function Landing() {
@@ -19,9 +20,9 @@ export function Landing() {
       <div id="app">
         <WebAppSection />
       </div>
-      {/* <div id="team">
+      <div id="team">
         <SCITeamSection />
-      </div>*/}
+      </div>
       <div id="faq">
         <FAQSection />
       </div>
