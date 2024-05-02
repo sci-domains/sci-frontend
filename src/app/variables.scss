@@ -93,17 +93,17 @@ $breakpoint-xxl: 1800px; // Extra extra large devices
 
 @media #{xxl-up()} {
   // Redefining the variables
-  $font-size-xs: 16px !global;
-  $font-size-sm: 20px !global;
-  $font-size-md: 22px !global;
-  $font-size-lg: 26px !global;
-  $font-size-xl: 54px !global;
-  $font-size-xxl: 70px !global;
-
-  $font-lh-xs: 21px !global;
-  $font-lh-sm: 24px !global;
-  $font-lh-md: 27px !global;
-  $font-lh-lg: 30px !global;
-  $font-lh-xl: 54px !global;
-  $font-lh-xxl: 70px !global;
+  //$font-size-xs: 16px !global;
+  //$font-size-sm: 20px !global;
+  //$font-size-md: 22px !global;
+  //$font-size-lg: 26px !global;
+  //$font-size-xl: 54px !global;
+  //$font-size-xxl: 70px !global;
+  //
+  //$font-lh-xs: 21px !global;
+  //$font-lh-sm: 24px !global;
+  //$font-lh-md: 27px !global;
+  //$font-lh-lg: 30px !global;
+  //$font-lh-xl: 54px !global;
+  //$font-lh-xxl: 70px !global;
 }
