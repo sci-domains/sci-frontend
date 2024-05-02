@@ -12,6 +12,10 @@
     padding: 60px 135px 100px 135px;
   }
 
+  @media #{xxl-up()} {
+    padding: 60px 435px 100px 435px;
+  }
+
   .title {
     font-size: $font-size-xl;
     line-height: $font-lh-xl;
@@ -64,6 +68,10 @@
 
   @media #{xl-up()} {
     flex: 1 0 629px;
+  }
+
+  @media #{xxl-up()} {
+    flex: 1 0 929px;
   }
 }
 

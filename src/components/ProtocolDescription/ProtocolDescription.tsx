@@ -8,8 +8,8 @@ export const ProtocolDescription: React.FC = () => {
         interface where traditional web meets blockchain is often vulnerable,
         <strong> leaving it susceptible to security breaches</strong> like DNS
         hijacking and compromised frontend servers.
-      </p>
-      <p>
+        <br />
+        <br />
         <strong className={styles.highlighted}>
           SCI is a protocol engineered to mitigate these risks, providing a
           robust verification system that instills confidence and trust in web3

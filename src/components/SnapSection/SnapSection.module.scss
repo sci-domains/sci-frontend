@@ -9,6 +9,10 @@
     padding: 24px 135px 100px 135px;
   }
 
+  @media #{xxl-up()} {
+    padding: 24px 435px 100px 435px;
+  }
+
   h3 {
     width: fit-content;
     padding: 4px 8px 4px 8px;
@@ -41,6 +45,10 @@
 
   @media #{sm-up()} {
     max-width: 729px;
+  }
+
+  @media #{xxl-up()} {
+   max-width: 1029px;
   }
 
   h1 {

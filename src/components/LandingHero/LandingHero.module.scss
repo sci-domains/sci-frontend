@@ -27,6 +27,10 @@
     @media #{xl-up()} {
       height: 129px;
     }
+
+    @media #{xxl-up()} {
+      height: 196px;
+    }
   }
 }
 

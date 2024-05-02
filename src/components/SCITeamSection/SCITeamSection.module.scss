@@ -12,6 +12,11 @@
     gap: 48px;
   }
 
+  @media #{xxl-up()} {
+    padding: 60px 435px 100px 435px;
+    gap: 48px;
+  }
+
   .title {
     font-size: $font-size-xl;
     line-height: $font-lh-xl;
@@ -29,6 +34,9 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 24px;
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
 
     @media #{sm-up()} {
       grid-template-columns: repeat(2, 1fr);
@@ -53,6 +61,10 @@
       flex-direction: column;
       align-items: start;
       max-width: 229px;
+    }
+
+    @media #{xxl-up()} {
+
     }
 
     img {

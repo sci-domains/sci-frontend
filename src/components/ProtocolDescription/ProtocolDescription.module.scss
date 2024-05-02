@@ -15,6 +15,11 @@
     gap: 29px;
   }
 
+  @media #{xxl-up()} { // Hide the burger icon on larger screens
+    padding: 96px 420px 96px 435px;
+    margin-bottom: 56px;
+  }
+
   p {
     color: $color-primary;
     font-size: 22px;

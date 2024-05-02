@@ -11,6 +11,10 @@
     padding: 60px 135px 100px 135px;
   }
 
+  @media #{xxl-up()} {
+    padding: 60px 435px 100px 435px;
+  }
+
   .tag {
     width: fit-content;
     font-size: $font-size-sm;
@@ -44,6 +48,10 @@
 
   @media #{sm-up()} {
     max-width: 829px;
+  }
+
+  @media #{xxl-up()} {
+    max-width: 1129px;
   }
 
   .title {
