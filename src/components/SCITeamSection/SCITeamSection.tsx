@@ -49,7 +49,12 @@ const SCITeamSection: React.FC = () => {
                 <h2>{member.name}</h2>
                 <p>{member.jobDescription}</p>
               </div>
-              <a className={styles.socialMedia} href={member.linkedInUrl}>
+              <a
+                className={styles.socialMedia}
+                rel="noreferrer nofollow"
+                target="_blank"
+                href={member.linkedInUrl}
+              >
                 <img
                   src={'/images/logo/linkedIn.svg'}
                   alt={'LinkedIn Profile'}

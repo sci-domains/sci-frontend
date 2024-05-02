@@ -21,8 +21,9 @@ const Header: React.FC = () => {
         <Link href="#snap">Snap</Link>
         <Link href="#faq">FAQ</Link>
         <Link
-          target={'_blank'}
-          href="https://raw.githubusercontent.com/sci-domains/core/blob/main/Whitepaper.pdf"
+          rel="noreferrer nofollow"
+          target="_blank"
+          href="https://github.com/sci-domains/core/blob/main/Whitepaper.pdf"
         >
           Docs
         </Link>
@@ -38,13 +39,18 @@ const Header: React.FC = () => {
       {menuOpen && (
         <div className={styles.fullScreenMenu}>
           <nav>
-            <Link href="/snap" onClick={toggleMenu}>
+            <Link href="#snap" onClick={toggleMenu}>
               Snap
             </Link>
-            <Link href="/faq" onClick={toggleMenu}>
+            <Link href="#faq" onClick={toggleMenu}>
               FAQ
             </Link>
-            <Link href="/docs" onClick={toggleMenu}>
+            <Link
+              rel="noreferrer nofollow"
+              target="_blank"
+              href="https://github.com/sci-domains/core/blob/main/Whitepaper.pdf"
+              onClick={toggleMenu}
+            >
               Docs
             </Link>
           </nav>
