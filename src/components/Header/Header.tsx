@@ -20,12 +20,8 @@ const Header: React.FC = () => {
       <div className={styles.nav}>
         <Link href="#snap">Snap</Link>
         <Link href="#faq">FAQ</Link>
-        <Link
-          rel="noreferrer nofollow"
-          target="_blank"
-          href="https://github.com/sci-domains/core/blob/main/Whitepaper.pdf"
-        >
-          Docs
+        <Link rel="noreferrer nofollow" target="_blank" href="/whitepaper">
+          Whitepaper
         </Link>
       </div>
 
@@ -48,10 +44,10 @@ const Header: React.FC = () => {
             <Link
               rel="noreferrer nofollow"
               target="_blank"
-              href="https://github.com/sci-domains/core/blob/main/Whitepaper.pdf"
+              href="/whitepaper"
               onClick={toggleMenu}
             >
-              Docs
+              Whitepaper
             </Link>
           </nav>
         </div>
