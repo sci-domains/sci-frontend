@@ -23,8 +23,8 @@ const Pagination: React.FC<PaginationProps> = ({
   onPageChange,
 }) => {
   const totalPages = Math.ceil(totalResults / pageSize);
-  const startIndex = (currentPage - 1) * pageSize;
-  const resultsShown = Math.min(pageSize, totalResults - startIndex);
+  const startIndex = currentPage * pageSize;
+  const resultsShown = Math.min(totalResults, startIndex);
   const isFirstPage = currentPage === 1;
   const isLastPage = currentPage === totalPages;
 

@@ -2,6 +2,7 @@ import React from 'react';
 
 import { Checkbox, CheckboxState } from '@/components/Checkbox/Checkbox';
 import { RemoveButton } from '@/components/RemoveButton/RemoveButton';
+import { cn } from '@/lib/utils';
 import styles from './ContractList.module.scss';
 
 interface ContractRowProps {
@@ -21,8 +22,13 @@ export const ContractRow: React.FC<ContractRowProps> = ({
   onCheckboxChange,
   onRemove,
 }) => {
+  // TODO get isDomainOwner from context
   return (
-    <div className={styles.headerRow}>
+    <div
+      className={cn(styles.headerRow, styles.contractRow, {
+        [styles.selectedRow]: checkboxState === 'checked',
+      })}
+    >
       <div className={styles.addressColumn}>
         {isDomainOwner && (
           <Checkbox state={checkboxState} onChange={onCheckboxChange} />

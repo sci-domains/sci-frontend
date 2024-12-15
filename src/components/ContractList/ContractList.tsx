@@ -102,21 +102,18 @@ export const ContractList: React.FC = () => {
       </div>
 
       {contracts.map((contract) => (
-        <>
-          <div className={styles.divider} />
-          <ContractRow
-            key={contract.address}
-            {...contract}
-            checkboxState={
-              selectedContracts.has(contract.address) ? 'checked' : 'unchecked'
-            }
-            onCheckboxChange={(state) =>
-              handleContractCheckboxChange(contract.address, state)
-            }
-            onRemove={() => handleContractRemove(contract.address)}
-            isDomainOwner={true}
-          />
-        </>
+        <ContractRow
+          key={contract.address}
+          {...contract}
+          checkboxState={
+            selectedContracts.has(contract.address) ? 'checked' : 'unchecked'
+          }
+          onCheckboxChange={(state) =>
+            handleContractCheckboxChange(contract.address, state)
+          }
+          onRemove={() => handleContractRemove(contract.address)}
+          isDomainOwner={true}
+        />
       ))}
     </div>
   );
