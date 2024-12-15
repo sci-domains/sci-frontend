@@ -1,0 +1,141 @@
+@import '@/app/variables.scss';
+
+.container {
+  border-radius: 4px;
+  border: 1px solid $color-grey-light;
+  background-color: $white;
+  display: flex;
+  margin-top: 16px;
+  width: 100%;
+  flex-direction: column;
+  justify-content: start;
+  padding: 8px 0;
+
+  @media #{lg-up()} {
+    max-width: 100%;
+  }
+}
+
+.headerRow {
+  display: flex;
+  min-height: 34px;
+  width: 100%;
+  align-items: center;
+  gap: 24px;
+  justify-content: start;
+  flex-wrap: wrap;
+  padding: 0 16px;
+
+  @media #{lg-up()} {
+    max-width: 100%;
+  }
+}
+
+.addressColumn {
+  align-self: stretch;
+  display: flex;
+  min-width: 240px;
+  align-items: center;
+  gap: 8px;
+  justify-content: start;
+  flex-wrap: wrap;
+  width: 540px;
+  margin: auto 0;
+
+  @media #{lg-up()} {
+    max-width: 100%;
+  }
+}
+
+.checkboxWrapper {
+  align-self: stretch;
+  display: flex;
+  min-height: 32px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  margin: auto 0;
+}
+
+.checkboxContainer {
+  border-radius: 100px;
+  display: flex;
+  min-height: 32px;
+  width: 32px;
+  align-items: center;
+  justify-content: center;
+  padding: 7px;
+}
+
+.checkbox {
+  border-radius: 2px;
+  border: 1px solid $color-grey-dark;
+  align-self: stretch;
+  display: flex;
+  min-height: 18px;
+  width: 18px;
+  height: 18px;
+  margin: auto 0;
+}
+
+.columnHeader {
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: $color-grey-dark;
+  justify-content: start;
+  margin: auto 0;
+  font: 500 $font-size-md/$font-lh-md $primary-font;
+}
+
+.chainColumn {
+  color: $color-grey-dark;
+  align-self: stretch;
+  flex: 1;
+  flex-basis: 0%;
+  margin: auto 0;
+  font: 500 $font-size-md/$font-lh-md $primary-font;
+}
+
+.divider {
+  width: 100%;
+  height: 1px;
+  background-color: $color-grey-light;
+  margin: 8px 0;
+}
+
+.contractAddress {
+  color: $color-grey-dark;
+  align-self: stretch;
+  margin: auto 0;
+  font: 300 $font-size-sm/$font-lh-sm $primary-font;
+}
+
+.chainIcons {
+  align-self: stretch;
+  display: flex;
+  min-width: 240px;
+  align-items: center;
+  gap: 8px;
+  justify-content: start;
+  height: 100%;
+  flex: 1;
+  flex-basis: 0%;
+}
+
+.chainIcon {
+  aspect-ratio: 1;
+  object-fit: contain;
+  object-position: center;
+  width: 24px;
+  border-radius: 4px;
+}
+
+.actionIcon {
+  aspect-ratio: 1;
+  object-fit: contain;
+  object-position: center;
+  width: 24px;
+}

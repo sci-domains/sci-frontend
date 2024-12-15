@@ -1,0 +1,98 @@
+@import '@/app/variables.scss';
+
+.alertContainer {
+  width: 100%;
+  align-items: center;
+  border-radius: 2px;
+  display: flex;
+  gap: 16px;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  padding: 16px;
+  font: $font-size-md/1.1 $primary-font;
+
+  &.caution {
+    border: 1px solid $color-accent-dark;
+    background: $color-accent-lighter;
+
+    .messageWrapper {
+      color: $color-accent-dark;
+    }
+  }
+
+  &.error {
+    border: 1px solid $error-dark;
+    background: $error-lighter;
+
+    .messageWrapper {
+      color: $error-dark;
+    }
+  }
+}
+
+.messageWrapper {
+  align-self: stretch;
+  display: flex;
+  min-width: 240px;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  flex: 1;
+  flex-basis: 16px;
+  margin: auto 0;
+
+  @media #{lg-up()} {
+    max-width: 100%;
+  }
+}
+
+.alertIcon {
+  aspect-ratio: 1;
+  object-fit: contain;
+  object-position: center;
+  width: 24px;
+  align-self: stretch;
+  margin: auto 0;
+}
+
+.alertMessage {
+  align-self: stretch;
+  min-width: 240px;
+  flex: 1;
+  margin: auto 0;
+
+  @media #{lg-up()} {
+    max-width: 100%;
+  }
+}
+
+.actionButton {
+  align-self: stretch;
+  border-radius: 4px;
+  background-color: $white;
+  min-height: 36px;
+  gap: 10px;
+  color: $color-primary;
+  font-weight: 400;
+  white-space: nowrap;
+  margin: auto 0;
+  padding: 9px 16px;
+  border: 1px solid $color-primary;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    background-color: $color-primary-lighter;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $color-primary;
+    outline-offset: 2px;
+  }
+
+  @media #{lg-up()} {
+    white-space: initial;
+  }
+}

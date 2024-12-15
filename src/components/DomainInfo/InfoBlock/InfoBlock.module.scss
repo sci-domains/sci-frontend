@@ -1,0 +1,25 @@
+@import '@/app/variables.scss';
+
+.infoBlock {
+  display: flex;
+  min-width: 240px;
+  flex-direction: column;
+  white-space: nowrap;
+  justify-content: start;
+  flex-grow: 1;
+  width: 345px;
+
+  @media #{lg-up()} {
+    white-space: initial;
+  }
+}
+
+.label {
+  font-weight: 500;
+}
+
+.value {
+  font-weight: 300;
+  margin-top: 4px;
+  word-break: break-all;
+}

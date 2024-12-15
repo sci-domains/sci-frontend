@@ -1,0 +1,50 @@
+@import '@/app/variables.scss';
+
+.container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 40px 100px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  font-family: $primary-font;
+  font-size: $font-size-md;
+}
+
+.actionWrapper {
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.whitelistButton {
+  border-radius: 4px;
+  background: $color-primary;
+  color: $white;
+  min-height: 36px;
+  padding: 9px 16px;
+  border: none;
+  cursor: pointer;
+  font-family: $primary-font;
+  font-size: $font-size-md;
+  font-weight: 400;
+}
+
+.filterWrapper {
+  align-self: stretch;
+  display: flex;
+  min-width: 240px;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+
+  @media (max-width: $breakpoint-lg) {
+    max-width: 100%;
+  }
+}
+
+.searchBar {
+  height: 100%;
+  padding: 9px 16px;
+}

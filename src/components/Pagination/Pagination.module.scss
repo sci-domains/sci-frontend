@@ -1,0 +1,28 @@
+@import '@/app/variables.scss';
+
+.pagination {
+  display: flex;
+  max-width: 898px;
+  align-items: center;
+  gap: 32px;
+  color: $black;
+  text-align: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  font: 300 $font-size-xs/$font-lh-xs $primary-font;
+}
+
+.pageNumbers {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.results {
+  white-space: nowrap;
+
+  @media (max-width: $breakpoint-lg) {
+    white-space: normal;
+  }
+}

@@ -1,0 +1,32 @@
+@import '@/app/variables.scss';
+
+.button {
+  align-self: stretch;
+  border: none;
+  background: none;
+  padding: 0;
+  margin: auto 0;
+  cursor: pointer;
+  font: 300 $font-size-xs/$font-lh-xs $primary-font;
+  color: $black;
+  position: relative; // Added to establish positioning context
+
+  &.active {
+    color: $white;
+    position: relative;
+    z-index: 1;
+
+    &::before {
+      content: '';
+      position: absolute;
+      background-color: $color-primary;
+      border-radius: 50%;
+      width: 18px;
+      height: 18px;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      z-index: -1;
+    }
+  }
+}

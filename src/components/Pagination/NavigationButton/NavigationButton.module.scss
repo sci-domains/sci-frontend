@@ -1,0 +1,19 @@
+@import '@/app/variables.scss';
+.navButton {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: none;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+  font: 300 $font-size-xs/$font-lh-xs $primary-font;
+  color: $black;
+
+  .icon {
+    aspect-ratio: 1;
+    object-fit: contain;
+    object-position: center;
+    width: 24px;
+  }
+}
