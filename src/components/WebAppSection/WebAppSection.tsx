@@ -11,9 +11,9 @@ export const WebAppSection: React.FC = () => {
           <p className={styles.description}>
             Our upcoming web application offers a straightforward solution to
             verify domain authenticity and securely associate your smart
-            contracts contracts with your domain. You will be able to easily
-            manage your ensuring that only your approved contracts can interact
-            with your domain.
+            contracts with your domain. You will be able to easily manage your
+            ensuring that only your approved contracts can interact with your
+            domain.
           </p>
         </div>
         <div className={styles.image}>
