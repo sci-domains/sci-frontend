@@ -2,11 +2,26 @@ import ContractList from '@/components/ContractList/ContractList';
 import DomainFilters from '@/components/DomainFilters/DomainFilters';
 import { DomainInfo } from '@/components/DomainInfo/DomainInfo';
 import InfoAlert from '@/components/InfoAlert/InfoAlert';
-import Pagination from '@/components/Pagination/Pagination';
-import React from 'react';
+import Pagination, {
+  PaginationState,
+} from '@/components/Pagination/Pagination';
+import React, { useCallback, useState } from 'react';
 import styles from './DomainDetailSection.module.scss';
 
 export const DomainDetailSection: React.FC = () => {
+  const [paginationState, setPaginationState] = useState<PaginationState>({
+    currentPage: 2,
+    pageSize: 30,
+    totalResults: 200,
+  });
+
+  const handlePageChange = useCallback((newPage: number) => {
+    setPaginationState((prev) => ({
+      ...prev,
+      currentPage: newPage,
+    }));
+  }, []);
+
   return (
     <section className={styles.domainDetailSection}>
       <InfoAlert
@@ -23,14 +38,15 @@ export const DomainDetailSection: React.FC = () => {
         onReportDomain={() => console.log('Report domain clicked')}
       />
       <DomainFilters />
-      <ContractList />
-      <Pagination
-        currentPage={1}
-        totalPages={10}
-        resultsShown={20}
-        totalResults={200}
-        onPageChange={(page) => console.log(`Page changed to: ${page}`)}
-      />
+      <div className={styles.contractsContainer}>
+        <ContractList />
+        <Pagination
+          currentPage={paginationState.currentPage}
+          pageSize={paginationState.pageSize}
+          totalResults={paginationState.totalResults}
+          onPageChange={handlePageChange}
+        />
+      </div>
     </section>
   );
 };

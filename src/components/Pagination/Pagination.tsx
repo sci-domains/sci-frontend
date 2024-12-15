@@ -3,26 +3,37 @@ import NavigationButton from './NavigationButton/NavigationButton';
 import styles from './Pagination.module.scss';
 import PaginationButton from './PaginationButton/PaginationButton';
 
+export interface PaginationState {
+  currentPage: number;
+  pageSize: number;
+  totalResults: number;
+}
+
 interface PaginationProps {
   currentPage: number;
-  totalPages: number;
-  resultsShown: number;
   totalResults: number;
+  pageSize: number;
   onPageChange: (page: number) => void;
 }
 
 const Pagination: React.FC<PaginationProps> = ({
   currentPage,
-  totalPages,
-  resultsShown,
   totalResults,
+  pageSize,
   onPageChange,
 }) => {
+  const totalPages = Math.ceil(totalResults / pageSize);
+  const startIndex = (currentPage - 1) * pageSize;
+  const resultsShown = Math.min(pageSize, totalResults - startIndex);
+  const isFirstPage = currentPage === 1;
+  const isLastPage = currentPage === totalPages;
+
   return (
     <nav className={styles.pagination} aria-label="Pagination">
       <NavigationButton
         direction="previous"
         onClick={() => onPageChange(currentPage - 1)}
+        disabled={isFirstPage}
       />
 
       <div className={styles.pageNumbers}>
@@ -42,6 +53,7 @@ const Pagination: React.FC<PaginationProps> = ({
       <NavigationButton
         direction="next"
         onClick={() => onPageChange(currentPage + 1)}
+        disabled={isLastPage}
       />
 
       <div className={styles.results} aria-live="polite">

@@ -1,28 +1,32 @@
 import React from 'react';
+
+import { Checkbox, CheckboxState } from '@/components/Checkbox/Checkbox';
+import { RemoveButton } from '@/components/RemoveButton/RemoveButton';
 import styles from './ContractList.module.scss';
 
 interface ContractRowProps {
   address: string;
   chainIcons: string[];
+  isDomainOwner: boolean;
+  checkboxState: CheckboxState;
+  onCheckboxChange: (state: CheckboxState) => void;
+  onRemove: () => void;
 }
 
 export const ContractRow: React.FC<ContractRowProps> = ({
   address,
   chainIcons,
+  isDomainOwner,
+  checkboxState,
+  onCheckboxChange,
+  onRemove,
 }) => {
   return (
     <div className={styles.headerRow}>
       <div className={styles.addressColumn}>
-        <div className={styles.checkboxWrapper}>
-          <div className={styles.checkboxContainer}>
-            <div
-              className={styles.checkbox}
-              role="checkbox"
-              aria-checked="false"
-              tabIndex={0}
-            />
-          </div>
-        </div>
+        {isDomainOwner && (
+          <Checkbox state={checkboxState} onChange={onCheckboxChange} />
+        )}
         <div className={styles.contractAddress}>{address}</div>
       </div>
       <div className={styles.chainIcons}>
@@ -36,12 +40,7 @@ export const ContractRow: React.FC<ContractRowProps> = ({
           />
         ))}
       </div>
-      <img
-        src={'/images/icons/remove.svg'}
-        alt="Action"
-        className={styles.actionIcon}
-        loading="lazy"
-      />
+      {isDomainOwner && <RemoveButton onClick={onRemove} />}
     </div>
   );
 };

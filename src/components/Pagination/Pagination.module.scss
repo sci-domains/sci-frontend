@@ -1,15 +1,17 @@
 @import '@/app/variables.scss';
 
 .pagination {
+  width: 100%;
   display: flex;
-  max-width: 898px;
   align-items: center;
   gap: 32px;
   color: $black;
   text-align: center;
   justify-content: flex-end;
   flex-wrap: wrap;
-  font: 300 $font-size-xs/$font-lh-xs $primary-font;
+  font-size: $font-size-xs;
+  font-weight: 300;
+  line-height: 160%;
 }
 
 .pageNumbers {

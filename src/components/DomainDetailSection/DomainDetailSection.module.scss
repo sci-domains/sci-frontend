@@ -18,3 +18,9 @@
   font-weight: 700;
   line-height: normal;
 }
+
+.contractsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}

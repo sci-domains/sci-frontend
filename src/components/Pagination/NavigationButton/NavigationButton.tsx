@@ -4,16 +4,19 @@ import styles from './NavigationButton.module.scss';
 interface NavigationButtonProps {
   direction: 'previous' | 'next';
   onClick?: () => void;
+  disabled?: boolean;
 }
 
 const NavigationButton: React.FC<NavigationButtonProps> = ({
   direction,
   onClick,
+  disabled = false,
 }) => {
   return (
     <button
-      className={styles.navButton}
+      className={`${styles.navButton} ${disabled ? styles.disabled : ''}`}
       onClick={onClick}
+      disabled={disabled}
       aria-label={direction === 'previous' ? 'Previous page' : 'Next page'}
     >
       <img
