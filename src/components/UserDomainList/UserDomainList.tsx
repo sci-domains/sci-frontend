@@ -1,19 +1,19 @@
-import { DomainItemType } from '@/types/domainItem';
+import { Domain } from '@/types/domain';
 import React from 'react';
 import { DomainItem } from './DomainItem/DomainItem';
 import styles from './UserDomainList.module.scss';
 
-const domains: DomainItemType[] = [
+const domains: Domain[] = [
   {
-    domain: 'thirddomain.xyz',
+    name: 'thirddomain.xyz',
     registrationDate: '12 Oct 2024, 9:00AM',
   },
   {
-    domain: 'seconddomain.xyz',
+    name: 'seconddomain.xyz',
     registrationDate: '10 Oct 2024, 9:00AM',
   },
   {
-    domain: 'domain.xyz',
+    name: 'domain.xyz',
     registrationDate: '11 Oct 2024, 9:00AM',
   },
 ];
@@ -40,9 +40,9 @@ export const UserDomainList: React.FC = () => {
         <div>Registration date</div>
       </div>
       {domains.map((domain, index) => (
-        <React.Fragment key={domain.domain}>
+        <React.Fragment key={domain.name}>
           <div className={styles.divider} role="separator" />
-          <DomainItem item={domain} onManage={handleManageDomain} />
+          <DomainItem domain={domain} onManage={handleManageDomain} />
         </React.Fragment>
       ))}
     </div>

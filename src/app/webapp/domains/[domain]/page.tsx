@@ -1,4 +1,3 @@
-'use client';
 import Header from '@/components/HeaderApp/Header';
 
 import { DomainDetailSection } from '@/components/DomainDetailSection/DomainDetailSection';

@@ -1,3 +1,4 @@
+'use client';
 import ContractList from '@/components/ContractList/ContractList';
 import DomainFilters from '@/components/DomainFilters/DomainFilters';
 import { DomainInfo } from '@/components/DomainInfo/DomainInfo';
